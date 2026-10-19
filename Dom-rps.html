@@ -7,6 +7,7 @@
     <button onclick="rps_result('Rock');">Rock </button>
     <button onclick="rps_result('Paper');">Paper</button>
     <button onclick="rps_result('Scissors');">scissors</button>
+    <button onclick="rps_reset();">Reset Score</button>
     <div class="result">
     </div>
     <div class="recap">
@@ -125,7 +126,18 @@
         const documentElem2 = document.querySelector('.details');
         documentElem2.innerHTML = "Wins: " + score.win + ", Losses: "+score.loss +", Ties:" + score.tie
     }
-
+    function rps_reset()
+    {
+        const documentElem = document.querySelector('.result');
+        documentElem.innerHTML='';
+        const documentElem1 = document.querySelector('.recap');
+        documentElem1.innerHTML ='';
+        const documentElem2 = document.querySelector('.details');
+        documentElem2.innerHTML = '';
+        score.loss =0;
+        score.win =0;
+        score.tie=0;
+    }
     </script>
 </body>
 </html>
