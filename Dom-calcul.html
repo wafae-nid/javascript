@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> calculator</title>
+    </header>
+    <body>
+        <input class="calcul" placeholder="enter value here">
+        </input>
+        <button  onclick="calculate();">calculate</button>
+        <div>
+        </div>
+        <script>
+            function calculate()
+            {
+                const documentElem = document.querySelector('.calcul');
+                const value_= Number(documentElem.value);
+                const documentElem2 = document.querySelector('div');
+                if(value_ < 50)
+                    documentElem2.innerHTML = "your order is " + (value_+ 10) +"$";
+                else
+                    documentElem2.innerHTML = "your order is " + (value_) +"$";
+            }
+        </script>
+    </body>
+</html>
