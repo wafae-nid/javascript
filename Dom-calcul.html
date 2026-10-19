@@ -4,7 +4,7 @@
         <title> calculator</title>
     </header>
     <body>
-        <input class="calcul" placeholder="enter value here">
+        <input class="calcul" placeholder="enter value here" onkeydown="typing(event)">
         </input>
         <button  onclick="calculate();">calculate</button>
         <div>
@@ -19,6 +19,14 @@
                     documentElem2.innerHTML = "your order is " + (value_+ 10) +"$";
                 else
                     documentElem2.innerHTML = "your order is " + (value_) +"$";
+            }
+            function typing(event)
+            {
+                const documentElem = document.querySelector('.calcul');
+                documentElem.placeholder ="typing..."
+                if(event.key === 'Enter')
+                    calculate();
+
             }
         </script>
     </body>
