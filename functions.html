@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        rock paper with function
+    </title>
+</head>
+<body>
+    <script src="function.js"></script>
+    <button onclick=" 
+      let  move = rps_move();
+        if(move == 'scissors')
+            alert('you won');
+        else if(move == 'rock')
+            alert('tie');
+        else
+            alert('i won');
+    "
+    > rock </button>
+    <button onclick="
+    let move = rps_move();
+     if(move == 'scissors')
+        alert('i won');
+     else if(move == 'rock')
+        alert('you won');
+     else
+        alert('tie');
+     "> paper </button>
+    <button onclick="
+     let move = rps_move();
+     if(move == 'scissors')
+        alert('tie');
+     else if(move == 'rock')
+        alert('i won');
+     else
+        alert('you won');
+    "> scissors </button>
+</body>
+</html> 

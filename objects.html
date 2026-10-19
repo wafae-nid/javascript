@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        rock paper with objects
+    </title>
+</head>
+<body>
+   
+    <script src="function.js"></script>
+    <script>
+         const score_saver={
+        win :0,
+        tie:0,
+        loss:0
+    }
+     </script>
+    <button onclick=" 
+       
+        let  move = rps_move();
+        if(move == 'scissors')
+        {
+            score_saver.win +=1;
+            alert(`you won ,losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+        }
+        else if(move == 'rock')
+        {
+            score_saver.tie += 1;
+            alert(`tie, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+        }
+        else
+        {
+            score_saver.loss += 1;
+           alert(`i won, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+        }
+    "
+    > rock </button>
+    <button onclick="
+    let move = rps_move();
+     if(move == 'scissors')
+     {
+
+         score_saver.loss += 1;
+        alert(`i won, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+     }
+     else if(move == 'rock')
+     {
+        score_saver.win +=1;
+        alert(`you won ,losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+     }
+     else
+     {
+        score_saver.tie += 1;
+            alert(`tie, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+    }
+     "> paper </button>
+    <button onclick="
+     let move = rps_move();
+     if(move == 'scissors')
+     { 
+        score_saver.tie += 1;
+        alert(`tie, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+     }
+     else if(move == 'rock')
+    {
+         score_saver.loss += 1;
+        alert(`i won, losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+    }
+     else
+    {
+        score_saver.win +=1;
+        alert(`you won ,losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+    }
+    "> scissors </button>
+    <button onclick="
+        score_saver.loss=0;
+        score_saver.win =0;
+        score_saver.tie=0;
+        alert(`losses:${score_saver.loss}, wins: ${score_saver.win}, tie:${score_saver.win}`);
+    " 
+    > reset score </button>
+</body>
+</html> 

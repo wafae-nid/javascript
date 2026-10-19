@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>wafae's DOm javascript</title>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button
+    onclick="subscribe();"class="js-subscribe">subscribe</button>
+  <script>
+
+    function subscribe()
+    {
+        const documentElem = document.querySelector('.js-subscribe');
+        if(documentElem.innerHTML === 'subscribe')
+            documentElem.innerHTML = 'subscribed';
+        else
+            documentElem.innerHTML = 'subscribe'; 
+    }
+
+    </script>
+</body>
+</html>
